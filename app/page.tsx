@@ -1,7 +1,7 @@
 import LandingHeader from '@/components/header/landing-header';
 import Hero from '@/components/landing/Hero';
 
-const page = () => {
+const LandingPage = () => {
   return (
     <main className="text-center">
       <LandingHeader />
@@ -10,4 +10,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default LandingPage;

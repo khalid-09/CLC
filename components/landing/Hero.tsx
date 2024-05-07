@@ -7,14 +7,14 @@ import LandingHeader from '../header/landing-header';
 const Hero = () => {
   return (
     <>
-      <section className="flex p-4 items-center h-dvh justify-center">
+      <section className="flex -translate-y-10 p-4 items-center h-dvh justify-center">
         <div className="flex flex-col justify-center items-center ">
-          <H1>Unlimited movies, TV shows and more</H1>
-          <P>Watch anywhere. Cancel anytime.</P>
+          <H1>Endless laughs, stand-up specials, and much more.</H1>
+          <P>Watch from anywhere, anytime. </P>
           <div className="mt-8 md:max-w-none max-w-96">
             <P>
-              Ready to watch? Enter your email or mobile number to create or
-              restart your membership.
+              Ready to chuckle? Enter your email or mobile number to start or
+              resume your subscription.
             </P>
           </div>
           <div className="flex md:flex-row flex-col gap-2 mt-3 items-center">
