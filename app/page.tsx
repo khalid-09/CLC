@@ -1,12 +1,12 @@
-import { ModeToggle } from '@/components/toggle-theme';
-import { Button } from '@/components/ui/button';
+import LandingHeader from '@/components/header/landing-header';
+import Hero from '@/components/landing/Hero';
 
 const page = () => {
   return (
-    <div>
-      <Button>Hello Next</Button>
-      <ModeToggle />
-    </div>
+    <main className="text-center">
+      <LandingHeader />
+      <Hero />
+    </main>
   );
 };
 
