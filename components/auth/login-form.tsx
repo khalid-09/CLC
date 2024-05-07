@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
 
-import { signInSchema } from '@/lib/validation/auth';
-import { Button } from '@/components/ui/button';
+import { logInSchema } from "@/lib/validation/auth";
+import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
@@ -13,26 +13,26 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
 
 const LoginForm = () => {
-  const form = useForm<z.infer<typeof signInSchema>>({
-    resolver: zodResolver(signInSchema),
+  const form = useForm<z.infer<typeof logInSchema>>({
+    resolver: zodResolver(logInSchema),
     defaultValues: {
-      email: '',
-      password: '',
+      email: "",
+      password: "",
     },
   });
 
-  const onSubmit = (data: z.infer<typeof signInSchema>) => {
+  const onSubmit = (data: z.infer<typeof logInSchema>) => {
     console.log(data);
     form.reset();
   };
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 mt-4">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="mt-4 space-y-4">
         <FormField
           control={form.control}
           name="email"
