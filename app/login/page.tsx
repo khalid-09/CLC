@@ -1,5 +1,5 @@
 import LoginForm from "@/components/auth/login-form";
-import { H3 } from "@/components/typography";
+import { H3, P } from "@/components/typography";
 import { Button } from "@/components/ui/button";
 import { GeistSans } from "geist/font/sans";
 import Link from "next/link";
@@ -14,15 +14,17 @@ const LoginPage = () => {
         <div className="flex flex-col">
           <H3>Log In</H3>
           <LoginForm />
-          <p className="mt-4 text-sm text-muted-foreground">
+          <P className="text-sm text-muted-foreground">
             New to CLC?{" "}
             <span className="text-secondary-foreground">
               <Link href="/">
                 <span className="font-semibold text-primary">Sign Up</span>
               </Link>
             </span>
+          </P>
+          <p className="mt-0 text-sm text-muted-foreground">
+            Forgot your password?
           </p>
-          <p className="text-sm text-muted-foreground">Forgot your password?</p>
         </div>
       </div>
       <div className="my-4 h-px w-20 bg-gray-300 md:mx-4 md:h-20 md:w-px" />

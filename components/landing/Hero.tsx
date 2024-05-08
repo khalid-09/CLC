@@ -13,7 +13,6 @@ const Hero = () => {
           <div className="mt-8">
             <P>
               <span className="font-medium text-primary/80">
-                {" "}
                 Ready to chuckle?{" "}
               </span>
               Enter your email or mobile number to start or resume your

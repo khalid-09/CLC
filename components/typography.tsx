@@ -1,51 +1,61 @@
-type Props = {
-  children: React.ReactNode;
-  styles?: string;
-};
+import { cn } from "@/lib/utils";
+import { HTMLProps } from "react";
 
-export function H1({ children, styles }: Props) {
+export function H1({ children, className }: HTMLProps<HTMLHeadingElement>) {
   return (
     <h1
-      className={`scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl ${styles}`}
+      className={cn(
+        "scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl",
+        className,
+      )}
     >
       {children}
     </h1>
   );
 }
 
-export function H2({ children, styles }: Props) {
+export function H2({ children, className }: HTMLProps<HTMLHeadingElement>) {
   return (
     <h2
-      className={`scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 ${styles}}`}
+      className={cn(
+        "scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0",
+        className,
+      )}
     >
       {children}
     </h2>
   );
 }
 
-export function H3({ children, styles }: Props) {
+export function H3({ children, className }: HTMLProps<HTMLHeadingElement>) {
   return (
     <h3
-      className={`scroll-m-20 text-center text-2xl font-semibold tracking-tight ${styles}}`}
+      className={cn(
+        "scroll-m-20 text-center text-2xl font-semibold tracking-tight",
+        className,
+      )}
     >
       {children}
     </h3>
   );
 }
 
-export function H4({ children, styles }: Props) {
+export function H4({ children, className }: HTMLProps<HTMLHeadingElement>) {
   return (
     <h4
-      className={`scroll-m-20 text-xl font-semibold tracking-tight ${styles}}`}
+      className={cn(
+        "scroll-m-20 text-xl font-semibold tracking-tight",
+        className,
+      )}
     >
       {children}
     </h4>
   );
 }
 
-export function P({ children, styles }: Props) {
+export function P({ children, className }: HTMLProps<HTMLParagraphElement>) {
   return (
-    <p className={`leading-7 [&:not(:first-child)]:mt-6 ${styles}`}>
+    <p className={cn("leading-7 [&:not(:first-child)]:mt-6", className)}>
       {children}
     </p>
   );

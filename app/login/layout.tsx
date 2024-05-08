@@ -1,9 +1,9 @@
-import { P } from '@/components/typography';
-import { Metadata } from 'next';
+import { P } from "@/components/typography";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'CLC | LogIn',
-  description: 'A stand up comedy streaming website',
+  title: "CLC | LogIn",
+  description: "A stand up comedy streaming website",
 };
 
 const LoginLayout = ({
@@ -13,7 +13,7 @@ const LoginLayout = ({
 }>) => {
   return (
     <>
-      <P styles={'px-16'}>CLC</P>
+      <P className="px-16">CLC</P>
       {children}
     </>
   );
