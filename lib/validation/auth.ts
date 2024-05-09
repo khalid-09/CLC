@@ -1,5 +1,3 @@
-"use client";
-
 import { z } from "zod";
 
 export const logInSchema = z.object({
@@ -10,3 +8,5 @@ export const logInSchema = z.object({
     .string({ required_error: "Password is required" })
     .min(8, "Password must be at least 8 characters long"),
 });
+
+export type LogInSchema = z.infer<typeof logInSchema>;

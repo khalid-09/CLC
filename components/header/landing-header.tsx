@@ -1,14 +1,14 @@
-import Link from 'next/link';
-import { ModeToggle } from '../toggle-theme';
-import { Button } from '../ui/button';
+import Link from "next/link";
+import { ModeToggle } from "../toggle-theme";
+import { Button } from "../ui/button";
 
 const LandingHeader = () => {
   return (
-    <nav className="w-full md:px-12 px-8 md:py-6 py-5  flex justify-between items-center">
+    <nav className="flex w-full items-center justify-between px-8  py-5 md:px-12 md:py-6">
       <div>CLC</div>
-      <div className="flex gap-2 items-center">
-        <Button>
-          <Link href="/login">LogIn</Link>
+      <div className="flex items-center gap-2">
+        <Button asChild>
+          <Link href="/auth/login">LogIn</Link>
         </Button>
         <ModeToggle />
       </div>

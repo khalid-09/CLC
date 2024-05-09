@@ -4,7 +4,10 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { GeistMono } from "geist/font/mono";
 
 export const metadata: Metadata = {
-  title: "Comedy Laughter Club",
+  title: {
+    default: "Home | CLC",
+    template: "%s | CLC",
+  },
   description: "A stand up comedy streaming website",
 };
 const RootLayout = ({

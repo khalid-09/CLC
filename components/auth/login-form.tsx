@@ -2,9 +2,9 @@
 
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
+import { useState } from "react";
+import { LogInSchema, logInSchema } from "@/lib/validation/auth";
 
-import { logInSchema } from "@/lib/validation/auth";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -15,9 +15,11 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { EyeNoneIcon, EyeOpenIcon } from "@radix-ui/react-icons";
 
 const LoginForm = () => {
-  const form = useForm<z.infer<typeof logInSchema>>({
+  const [showPassword, setShowPassword] = useState(false);
+  const form = useForm<LogInSchema>({
     resolver: zodResolver(logInSchema),
     defaultValues: {
       email: "",
@@ -25,14 +27,18 @@ const LoginForm = () => {
     },
   });
 
-  const onSubmit = (data: z.infer<typeof logInSchema>) => {
+  const onSubmit = (data: LogInSchema) => {
     console.log(data);
     form.reset();
   };
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className="mt-4 space-y-4">
+      <form
+        onSubmit={form.handleSubmit(onSubmit)}
+        noValidate
+        className="space-y-4"
+      >
         <FormField
           control={form.control}
           name="email"
@@ -51,9 +57,23 @@ const LoginForm = () => {
           name="password"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Password</FormLabel>
+              <FormLabel htmlFor="password">Password</FormLabel>
               <FormControl>
-                <Input placeholder="Enter password" {...field} />
+                <div className="relative">
+                  <Input
+                    id="password"
+                    type={showPassword ? "text" : "password"}
+                    placeholder="Enter password"
+                    {...field}
+                  />
+                  <div onClick={() => setShowPassword((value) => !value)}>
+                    {showPassword ? (
+                      <EyeNoneIcon className="absolute right-3 top-2 h-5 w-5" />
+                    ) : (
+                      <EyeOpenIcon className="absolute right-3 top-2 h-5 w-5" />
+                    )}
+                  </div>
+                </div>
               </FormControl>
               <FormMessage />
             </FormItem>
