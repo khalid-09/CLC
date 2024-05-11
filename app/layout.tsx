@@ -17,7 +17,9 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="en">
-      <body className={`${GeistMono.className} scroll-smooth`}>
+      <body
+        className={`${GeistMono.className} overflow-x-hidden scroll-smooth`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

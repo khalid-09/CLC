@@ -18,7 +18,7 @@ export const faqs = [
     item: "item-3",
   },
   {
-    question: "Is there a way to search for specific comedians?",
+    question: "Can i search for specific comedians?",
     answer:
       "Absolutely! You can easily search for your favorite comedians or browse through different genres to find content that suits your taste. Our search and filtering options make it simple to discover new comedians or explore specific comedy styles.",
     item: "item-4",
