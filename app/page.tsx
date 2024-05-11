@@ -1,11 +1,11 @@
 import LandingHeader from "@/components/header/landing-header";
-import FAQS from "@/components/landing/FAQS";
-import Footer from "@/components/landing/Footer";
-import Hero from "@/components/landing/Hero";
+import FAQS from "@/components/landing/frequently-asked";
+import Footer from "@/components/landing/landing-footer";
+import Hero from "@/components/landing/landing-hero";
 
 const LandingPage = () => {
   return (
-    <main className="text-center">
+    <main className="m-auto max-w-6xl">
       <LandingHeader />
       <Hero />
       <FAQS />

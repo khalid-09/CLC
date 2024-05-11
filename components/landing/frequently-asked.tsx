@@ -13,8 +13,8 @@ import { GeistSans } from "geist/font/sans";
 
 const FAQS = () => {
   return (
-    <section className="my-10 md:p-10 ">
-      <H1>Frequnetly Asked Questions</H1>
+    <section id="faqs" className="my-10 md:p-10 ">
+      <H1 className="text-center">Frequnetly Asked Questions</H1>
       <Accordion
         type="single"
         collapsible
@@ -30,7 +30,7 @@ const FAQS = () => {
         ))}
       </Accordion>
       <div className="mt-10 space-y-4 p-4">
-        <P>
+        <P className="text-center">
           Ready to chuckle? Enter your email or mobile number to start or resume
           your subscription.
         </P>
