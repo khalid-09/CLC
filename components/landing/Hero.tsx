@@ -6,7 +6,7 @@ import { Input } from "../ui/input";
 const Hero = () => {
   return (
     <>
-      <section className="flex h-dvh -translate-y-10 items-center justify-center p-4">
+      <section className="flex h-dvh items-center justify-center p-4">
         <div className={`flex flex-col items-center justify-center `}>
           <H1>Endless laughs, stand-up specials, and much more.</H1>
           <P>Watch from anywhere, anytime. </P>

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 const LoginPage = () => {
   return (
-    <Card className="w-full p-4 shadow-md md:w-[400px] md:p-6">
+    <Card className="w-full -translate-y-10 shadow-md md:w-[400px] md:-translate-y-0 md:p-4">
       <CardHeader>
         <CardTitle>LogIn</CardTitle>
         <CardDescription>to your CLC account</CardDescription>
@@ -30,7 +30,7 @@ const LoginPage = () => {
         <div>
           <P className="text-sm text-muted-foreground">
             New to CLC?{" "}
-            <Link className="font-semibold text-primary" href="/auth/signup">
+            <Link className="font-semibold text-primary" href="/signup">
               Sign Up
             </Link>
           </P>

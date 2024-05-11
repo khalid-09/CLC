@@ -18,12 +18,14 @@ const FAQS = () => {
       <Accordion
         type="single"
         collapsible
-        className={`${GeistSans.className} m-auto mt-3 p-4 md:w-2/3`}
+        className={` m-auto mt-3 p-4 md:w-2/3`}
       >
         {faqs.map((faq) => (
           <AccordionItem key={faq.item} value={faq.item}>
             <AccordionTrigger>{faq.question}</AccordionTrigger>
-            <AccordionContent>{faq.answer}</AccordionContent>
+            <AccordionContent className={`${GeistSans.className}`}>
+              {faq.answer}
+            </AccordionContent>
           </AccordionItem>
         ))}
       </Accordion>

@@ -5,8 +5,8 @@ import { GeistMono } from "geist/font/mono";
 
 export const metadata: Metadata = {
   title: {
-    default: "Home | CLC",
-    template: "%s | CLC",
+    default: "Home | Comedy Laughter Club",
+    template: "%s | Comedy Laughter Club",
   },
   description: "A stand up comedy streaming website",
 };
@@ -17,7 +17,7 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="en">
-      <body className={GeistMono.className}>
+      <body className={`${GeistMono.className} scroll-smooth`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

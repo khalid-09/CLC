@@ -4,11 +4,11 @@ import { Button } from "../ui/button";
 
 const LandingHeader = () => {
   return (
-    <nav className="flex w-full items-center justify-between px-8  py-5 md:px-12 md:py-6">
-      <div>CLC</div>
+    <nav className=" fixed inset-x-0 left-0 top-0  z-10 flex w-full items-center justify-between border-b border-muted px-8 py-5 shadow-sm backdrop-blur md:px-12 md:py-6">
+      <p>CLC</p>
       <div className="flex items-center gap-2">
         <Button asChild>
-          <Link href="/auth/login">LogIn</Link>
+          <Link href="/login">LogIn</Link>
         </Button>
         <ModeToggle />
       </div>
