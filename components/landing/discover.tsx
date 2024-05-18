@@ -35,10 +35,10 @@ const Discover = () => {
                 <CardContent className="flex aspect-square items-center justify-center p-6">
                   {/* <span className="text-4xl font-semibold">{index + 1}</span> */}
                   <Image
-                    src="/car.jpg"
+                    src="/rocks.jpg"
                     alt="Car Img"
                     className="self-center"
-                    width={500}
+                    width={400}
                     height={300}
                   />
                 </CardContent>
